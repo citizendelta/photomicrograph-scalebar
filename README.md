@@ -14,3 +14,5 @@ In its current form, the script uses TrueType fonts in the Linux filesystem for 
 The program is set up to be run from in the directory where the photos located.  So, navigate to that directory before running the script.  If no photos are found, the script will notify the user.
 
 Only a limited number of photo types are currently included, but this can easily be modifed by adding to the _imagetypes_ variable and is only limited by what is supported by PIL.
+
+The script also requires that the scale of the image be included in the filename.  So, if a photo was taken at 100x magnification, the photo should be labeled to reflect that magnification.  For example, _photo001.jpg_ should be renamed to something like _photo001-100x.jpg_. The script looks for the string '100x' anywhere in the filename, so it can be placed anywhere in the filename and does not need to conform to format of the given example.

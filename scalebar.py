@@ -8,16 +8,14 @@ cwd = getcwd()
 filelist = listdir(cwd)
 
 # this is a list of possible images types.  feel free to expand it.
-# at the moment this program only supports three-letter extensions, and
-# it is case sensitive.
-imagetypes = ['.jpg', '.png', '.tif', '.gif', '.JPG', '.TIF', \
-'.PNG', '.GIF']
+# at the moment this program only supports three-letter extensions.
+imagetypes = ['.jpg', '.png', '.tif', '.gif']
 photolist = []
 
 # make a new list that only includes images
 for i in imagetypes:
     for j in filelist:
-        if j.endswith(i):
+        if j.lower().endswith(i):
             photolist.append(j)
             
 if photolist == []:

@@ -19,7 +19,7 @@ for i in imagetypes:
             photolist.append(j)
             
 if photolist == []:
-    print('There are no photos in this diretory')
+    print 'There are no photos in this diretory'
 
 # function for determining which scale bar label to use.  length of the 
 # scale bar is related to the width of the image. this assumes that the
@@ -58,9 +58,9 @@ for i in photolist:
         mag = 0.114 * imx
         label = scalelabel(i)
         if label == 'error':
-            print('Either %s is labeled incorrectly, or '\
+            print 'Either %s is labeled incorrectly, or '\
             'that scale does not yet have a definition in the '\
-            'program.\n' % i)
+            'program.\n' % i
         else:
             # define the font to use.  this will be in a different 
             # location in Windows
@@ -81,7 +81,7 @@ for i in photolist:
             imy - (imy / 10) - (imy / 20)), label, font = fnt, \
             fill = fntcolor)
             im.save(newname)
-            print('%s has been re-saved with a scale bar as'\
-            ' %s.\n' % (i, newname))
+            print '%s has been re-saved with a scale bar as'\
+            ' %s.\n' % (i, newname)
 
 #eof
